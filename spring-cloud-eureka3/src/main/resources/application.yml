@@ -1,0 +1,18 @@
+# 应用名称
+spring:
+  application:
+    name: spring-cloud-eureka
+server:
+  port: 7003
+eureka:
+  instance:
+    hostname: eureka3
+#    prefer-ip-address: false
+  client:
+    # false表示不向注册中心注册自己
+    fetch-registry: true
+    # false表示自己就是注册中心
+    register-with-eureka: true
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka
