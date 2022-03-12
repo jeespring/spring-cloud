@@ -16,6 +16,8 @@
         <module>spring-cloud-order</module>
         <module>spring-cloud-pay01</module>
         <module>spring-cloud-pay02</module>
+        <module>spring-cloud-hystrix-order</module>
+        <module>spring-cloud-hystrix-pay</module>
     </modules>
 
     <properties>
@@ -26,6 +28,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
+        <spring-cloud-netflix-hystrix.version>2.2.6.RELEASE</spring-cloud-netflix-hystrix.version>
 
         <lombok.version>1.18.12</lombok.version>
         <fastjson.version>1.2.75</fastjson.version>
@@ -53,6 +57,12 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>${spring-cloud-netflix-hystrix.version}</version>
             </dependency>
 
             <dependency>

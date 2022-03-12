@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-hystrix-order
+server:
+  port: 10005
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #单机
+       defaultZone: http://eureka1:7001/eureka
+      #集群
+#      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka,http://eureka3:7003/eureka

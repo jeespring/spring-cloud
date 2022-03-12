@@ -7,13 +7,13 @@
         <groupId>com.jeespring</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.jeespring</groupId>
-    <artifactId>spring-cloud-order</artifactId>
+    <artifactId>spring-cloud-hystrix-pay</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>spring-cloud-order</name>
-    <description>spring-cloud-order</description>
+    <name>spring-cloud-hystrix-pay</name>
+    <description>spring-cloud-hystrix-pay</description>
 
     <dependencies>
         <dependency>
@@ -28,13 +28,12 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
