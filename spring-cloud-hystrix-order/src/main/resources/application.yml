@@ -12,3 +12,36 @@ eureka:
        defaultZone: http://eureka1:7001/eureka
       #集群
 #      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka,http://eureka3:7003/eureka
+
+feign:
+  circuitbreaker:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 3000
+        readTimeout: 3000
+        # feign日志级别，分别是：none、basic、headers、full
+        # full：请求和响应完整日志
+        loggerLevel: full
+# Hystrix的超时时间配置，超时时间优先级 hystrix > ribbon > feign
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+            maxConcurrentRequests: 100
+          thread:
+            timeoutInMilliseconds: 3000
+#ribbon的超时时间
+ribbon:
+  ReadTimeout: 2000
+  ConnectTimeout: 2000
+
+logging:
+  level:
+    com.jeespring: DEBUG

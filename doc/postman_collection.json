@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "e53a644b-dd99-4e2c-b848-7a8dc9ab67a1",
+		"name": "Spring Cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "order/selectById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10001/order/selectById?id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10001",
+					"path": [
+						"order",
+						"selectById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hystrix-order/selectById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10005/order/selectById?id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10005",
+					"path": [
+						"order",
+						"selectById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order/selectAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10001/order/selectAll",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10001",
+					"path": [
+						"order",
+						"selectAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hystrix-order/selectAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10005/order/selectById?id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10005",
+					"path": [
+						"order",
+						"selectById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

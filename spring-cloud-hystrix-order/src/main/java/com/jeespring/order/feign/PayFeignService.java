@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Date 2020/11/25 19:46
  */
 @Service
-@FeignClient(value = "SPRING-CLOUD-HYSTRIX-PAY", path = "/pay")
+@FeignClient(value = "SPRING-CLOUD-HYSTRIX-PAY", path = "/pay",fallback = PayFeignFallBackService.class)
 public interface PayFeignService {
 
     @GetMapping("/selectById")
