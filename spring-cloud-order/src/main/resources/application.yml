@@ -19,3 +19,9 @@ feign:
       default:
         connectTimeout: 3000
         readTimeout: 3000
+        # feign日志级别，分别是：none、basic、headers、full
+        # full：请求和响应完整日志
+        loggerLevel: full
+logging:
+  level:
+    com.jeespring: DEBUG
