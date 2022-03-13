@@ -18,6 +18,8 @@
         <module>spring-cloud-pay02</module>
         <module>spring-cloud-hystrix-order</module>
         <module>spring-cloud-hystrix-pay</module>
+        <module>spring-cloud-gateway</module>
+        <module>spring-cloud-gateway-order</module>
     </modules>
 
     <properties>

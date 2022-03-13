@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能
+      routes:
+      - id: spring-cloud-gateway-order
+        uri: lb://SPRING-CLOUD-GATEWAY-ORDER
+#          uri: http://127.0.0.1:7101
+        predicates:
+        - Path=/api/order/**
+        filters:
+        - StripPrefix=2
+
+server:
+  port: 10000
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #单机
+      defaultZone: http://eureka1:7001/eureka
+      #集群
+#      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka,http://eureka3:7003/eureka
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+logging:
+  level:
+    com.jeespring.*: DEBUG
