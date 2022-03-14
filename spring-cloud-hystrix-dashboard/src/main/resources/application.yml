@@ -1,8 +1,8 @@
 spring:
   application:
-    name: spring-cloud-gateway-order
+    name: spring-cloud-hystrix-dashboard
 server:
-  port: 10008
+  port: 10007
 eureka:
   client:
     fetch-registry: true
@@ -12,3 +12,6 @@ eureka:
        defaultZone: http://eureka1:7001/eureka
       #集群
 #      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka,http://eureka3:7003/eureka
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"

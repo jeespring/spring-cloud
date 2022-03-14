@@ -32,7 +32,7 @@ hystrix:
         timeout:
           enabled: true
         isolation:
-          strategy: SEMAPHORE
+          strategy: THREAD
           semaphore:
             maxConcurrentRequests: 100
           thread:
@@ -45,3 +45,9 @@ ribbon:
 logging:
   level:
     com.jeespring: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # *的话是暴露全部的
