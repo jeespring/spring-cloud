@@ -22,6 +22,8 @@
         <module>spring-cloud-gateway-order</module>
         <module>spring-cloud-hystrix-dashboard</module>
         <module>spring-cloud-stream</module>
+        <module>spring-cloud-sleuth-order</module>
+        <module>spring-cloud-sleuth-pay</module>
     </modules>
 
     <properties>
@@ -34,6 +36,7 @@
         <maven.compiler.target>8</maven.compiler.target>
 
         <spring-cloud-netflix-hystrix.version>2.2.6.RELEASE</spring-cloud-netflix-hystrix.version>
+        <spring-cloud-starter-zipkin.version>2.2.8.RELEASE</spring-cloud-starter-zipkin.version>
 
         <lombok.version>1.18.12</lombok.version>
         <fastjson.version>1.2.75</fastjson.version>
@@ -73,6 +76,12 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
                 <version>${spring-cloud-netflix-hystrix.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zipkin</artifactId>
+                <version>${spring-cloud-starter-zipkin.version}</version>
             </dependency>
 
             <dependency>

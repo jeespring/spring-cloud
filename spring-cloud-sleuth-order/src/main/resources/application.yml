@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-cloud-sleuth-order
+  zipkin:
+    base-url: http://127.0.0.1:9411
+  sleuth:
+    sampler:
+      # 采样率 范围 0~1 ，1表示全部采集
+      probability: 1
+server:
+  port: 10011
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      #单机
+       defaultZone: http://eureka1:7001/eureka
+      #集群
+#      defaultZone: http://eureka1:7001/eureka,http://eureka2:7002/eureka,http://eureka3:7003/eureka
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 3000
+        readTimeout: 3000
+        # feign日志级别，分别是：none、basic、headers、full
+        # full：请求和响应完整日志
+        loggerLevel: full
+logging:
+  level:
+    com.jeespring: DEBUG
