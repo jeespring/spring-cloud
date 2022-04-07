@@ -34,6 +34,112 @@
 			"response": []
 		},
 		{
+			"name": "order/selectAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10001/order/selectAll",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10001",
+					"path": [
+						"order",
+						"selectAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sleuth-order/selectAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10011/order/selectAll",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10011",
+					"path": [
+						"order",
+						"selectAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateway/selectById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10000/api/order/order/selectById?id=1&username=zhang",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10000",
+					"path": [
+						"api",
+						"order",
+						"order",
+						"selectById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "username",
+							"value": "zhang"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gateway-order/selectById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10008/order/selectById?id=1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "10008",
+					"path": [
+						"order",
+						"selectById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "hystrix-order/selectById",
 			"request": {
 				"method": "GET",
@@ -62,34 +168,12 @@
 			"response": []
 		},
 		{
-			"name": "order/selectAll",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:10001/order/selectAll",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "10001",
-					"path": [
-						"order",
-						"selectAll"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "hystrix-order/selectAll",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:10005/order/selectById?id=1",
+					"raw": "127.0.0.1:10005/order/selectAll",
 					"host": [
 						"127",
 						"0",
@@ -99,13 +183,28 @@
 					"port": "10005",
 					"path": [
 						"order",
-						"selectById"
+						"selectAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hystrix-order/hystrix.stream",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:10005/hystrix.stream",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
 					],
-					"query": [
-						{
-							"key": "id",
-							"value": "1"
-						}
+					"port": "10005",
+					"path": [
+						"hystrix.stream"
 					]
 				}
 			},
