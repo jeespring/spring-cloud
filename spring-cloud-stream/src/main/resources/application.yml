@@ -1,4 +1,6 @@
 # 应用名称
-spring.application.name=spring-cloud-stream
+spring:
+  application:
+    name: spring-cloud-stream
 
 
